@@ -1,2 +1,2 @@
-scripts_local/ 
-*.bat
+scripts/*.bat
+!scripts/*.example.bat

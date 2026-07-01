@@ -1,7 +1,12 @@
 @echo off
 setlocal
 
-cd /d "D:\users\bernd\PRIVAT\github\pvsim"
+set LOC_DIR=D:\PFAD\ZUM\REPO
+
+cd /d "%LOC_DIR%"
+
+echo Bitte die Pfade anpassen
+pause
 
 git pull --rebase origin main
 if errorlevel 1 (
