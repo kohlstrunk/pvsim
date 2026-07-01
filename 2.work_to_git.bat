@@ -4,9 +4,10 @@ setlocal
 set WINAVR_SRC=D:\users\bernd\PRIVAT\winavr\pvsim
 set EAGLE_SRC=D:\users\bernd\PRIVAT\eagle\pvsim
 rem set GIT_DIR=D:\users\bernd\PRIVAT\github\pvsim
+set LOC_DIR=D:\users\bernd\PRIVAT\github\pvsim
 
-set WINAVR_DST=%GIT_DIR%\WinAVR
-set EAGLE_DST=%GIT_DIR%\Eagle
+set WINAVR_DST=%LOC_DIR%\WinAVR
+set  EAGLE_DST=%LOC_DIR%\Eagle
 
 echo Kopiere WinAVR...
 
