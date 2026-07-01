@@ -4,20 +4,21 @@ PV-Modul-Simulator
 - getestet an Hoymiles HMS-800W-2T
 - erlaubt DC-seitige Einstellung der Einspeiseleistung
 
-Enth‰lt:
+Enth√§lt:
 - WinAVR-Projekt
 - Eagle-Schaltplan und Layout
 - Fertigungsdaten
 
 Entwicklungsstand
-- Erprobung 2-Kanalig an beiden separaten MPPT-Kan‰len
-- Erprobung 1-kanalig mit parallel geschalteten MPPT-Kan‰len
-- Erprobung mit Si-H-Br¸cke 50V 50A bei 62kHz Schaltfrequenz
+- Erprobung 2-Kanalig an beiden separaten MPPT-Kan√§len
+- Erprobung 1-kanalig mit parallel geschalteten MPPT-Kan√§len
+- Erprobung mit Si-H-Br√ºcke 50V 50A bei 62kHz Schaltfrequenz
 
 Perspektive:
-- Umstellung auf 250kHz GaN-Halbbr¸cke 20A mit parallel geschalteten MPPT-Kan‰len
+- Umstellung auf 250kHz GaN-Halbbr√ºcke 20A mit parallel geschalteten MPPT-Kan√§len
 
 
 Links:
+
 https://www.mikrocontroller.net/topic/585740
 https://epc-co.com/epc/products/gan-fets-and-ics/epc23109
