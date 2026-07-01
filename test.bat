@@ -1,0 +1,3 @@
+setlocal
+git status
+pause
