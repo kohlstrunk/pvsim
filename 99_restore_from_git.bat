@@ -3,10 +3,10 @@ setlocal
 
 set WINAVR_DST=D:\users\bernd\PRIVAT\winavr\pvsim
 set EAGLE_DST=D:\users\bernd\PRIVAT\eagle\pvsim
-set GIT_DIR=D:\users\bernd\PRIVAT\github\pvsim
+set LOC_DIR=D:\users\bernd\PRIVAT\github\pvsim
 
-set WINAVR_SRC=%GIT_DIR%\WinAVR
-set EAGLE_SRC=%GIT_DIR%\Eagle
+set WINAVR_SRC=%LOC_DIR%\WinAVR
+set EAGLE_SRC=%LOC_DIR%\Eagle
 
 echo ACHTUNG: Arbeitsdateien werden aus der GitHub-Kopie ueberschrieben.
 set /p OK=Fortfahren? J/N: 
@@ -17,7 +17,7 @@ if /I not "%OK%"=="J" (
     exit /b 0
 )
 
-cd /d "%GIT_DIR%"
+cd /d "%LOC_DIR%"
 git pull --rebase origin main
 if errorlevel 1 (
     echo Fehler beim Pull.
@@ -26,7 +26,7 @@ if errorlevel 1 (
 )
 
 echo Stelle WinAVR wieder her...
-robocopy "%WINAVR_SRC%" "%WINAVR_DST%" /MIR /XD default alt .git /XF id_rsa id_rsa.pub
+robocopy "%WINAVR_SRC%" "%WINAVR_DST%" /MIR /XD default alt .git 
 if errorlevel 8 (
     echo Fehler beim Wiederherstellen von WinAVR.
     pause
@@ -40,6 +40,6 @@ if errorlevel 8 (
     pause
     exit /b 1
 )
-
+echo \Fertigung und \Doku muesste hier noch folgen
 echo Wiederherstellung abgeschlossen.
 pause
