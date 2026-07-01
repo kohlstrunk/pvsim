@@ -1,2 +1,3 @@
 scripts/*.bat
 !scripts/*.example.bat
+*.lnk
