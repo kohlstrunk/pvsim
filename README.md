@@ -19,5 +19,5 @@ Perspektive:
 
 
 Links:
-https://www.mikrocontroller.net/topic/585740
-https://epc-co.com/epc/products/gan-fets-and-ics/epc23109
+[1[ https://www.mikrocontroller.net/topic/585740
+[2] https://epc-co.com/epc/products/gan-fets-and-ics/epc23109
