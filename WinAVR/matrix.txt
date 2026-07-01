@@ -1,0 +1,52 @@
+ToDo: Schwing-Erkennung(Imax) 
+
+
+9. Rv=0, dsp=9, Strom über 5V/16A
+di=6: pscale=100% -> 330W 38V  105% 350W  7A*51,8W=350W
+di=7: pscale=100% -> 327W 39V  105% 369W
+
+8. Filterzeit 8->9 verbessert Sinusmodulation
+
+7. Dropshift: bei 6 optimal vorerst wegen höherem Vout
+DI=4:
+- Uout runter auf 33V
+- Rv=0 nur geringen Effekt Uout 33->34V
+- FE=0 dazu 30V aber kleine Amplitude um 8A
+DI=6: 
+- leicht höhere Amplitude mit oder ohne Rv=0
+- Rv=0 führt zu höherer Uout 38V->40V
+
+4. Filter Disable Q80% DI=5
+- manchmal Schwingung mit 1.5ms Periode 
+- kleinere Grundamplitude
+- Rv=0 -> riesen Amplitude 
+
+3. Einschalten mit 8-ter Notchfilter bei 216µs drop>>5 
+
+Leistung     1    10    20    40    60    80    100
+TA7        >38V  >41V  37V   30V
+TA6	          42V >40V   37V   33V
+TA5               N    41V  >39V   37V    35V
+TA4                          39V  >38V   >36V  >34V
+TA3                                       35V   34V
+
+1. Einschalten auf bestimmte Leistung mit 16er Notchfilter bei 130µs
+
+Leistung     1    10    20    40    60    80    100
+TA7        >J45V >J41V >J39V  J36V
+TA6	     N     N    J41V >J38V J36V   J34V
+TA5          N33V  N    J41V  J39V >J38V   J36V
+TA4          N     N    N     N     J37V  >J36V
+TA3                                       N
+
+2. Einschalten auf bestimmte Leistung ohne Notchfilter
+130µs
+
+Leistung     1    10    20    40    60    80    100
+TA7         J35V J39V 
+TA6	         J41V  J38V  J33V
+TA5                         (J36V) J33V  J32V
+TA4                                 N    (J33V)
+TA3                                       
+
+2. Umschalten von 60% auf bestimmte Leistung
