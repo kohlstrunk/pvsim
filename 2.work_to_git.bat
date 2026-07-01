@@ -3,7 +3,6 @@ setlocal
 
 set WINAVR_SRC=D:\users\bernd\PRIVAT\winavr\pvsim
 set EAGLE_SRC=D:\users\bernd\PRIVAT\eagle\pvsim
-rem set GIT_DIR=D:\users\bernd\PRIVAT\github\pvsim
 set LOC_DIR=D:\users\bernd\PRIVAT\github\pvsim
 
 set WINAVR_DST=%LOC_DIR%\WinAVR
@@ -25,13 +24,14 @@ for /D %%d in ("%EAGLE_DST%\*") do rd /S /Q "%%d"
 robocopy "%EAGLE_SRC%" "%EAGLE_DST%" *.sch *.brd *.lbr *.cam *.dru *.ulp 
 robocopy "%EAGLE_SRC%\Fertigung" "%EAGLE_DST%\Fertigung" /MIR
 robocopy "%EAGLE_SRC%\Doku" "%EAGLE_DST%\Doku" /MIR
+
 if errorlevel 8 (
     echo Fehler beim Kopieren von Eagle.
     pause
     exit /b 1
 )
 
-cd /d "%GIT_DIR%"
+cd /d "%LOC_DIR%"
 
 git add -A
 
